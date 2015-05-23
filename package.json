@@ -1,0 +1,17 @@
+{
+  "name": "ironforger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sam Lau <sam.suifai.lau@gmail.com> (http://esayemm.github.io/)",
+  "license": "ISC",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "fs-extra": "^0.18.4",
+    "inquirer": "^0.8.5",
+    "yargs": "^3.9.1"
+  }
+}

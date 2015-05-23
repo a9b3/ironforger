@@ -3,11 +3,24 @@
   "version": "0.1.0",
   "description": "Simple boilerplate app.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "scripts": {},
+  "keywords": {
+    "boilerplate",
+    "template",
+    "templating",
+    "templates"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/esayemm/ironforger.git"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "ironforger": "index.js"
   },
   "author": "Sam Lau <sam.suifai.lau@gmail.com> (http://esayemm.github.io/)",
   "license": "ISC",
+  "homepage": "https://github.com/esayemm/ironforger",
   "dependencies": {
     "debug": "^2.2.0",
     "fs-extra": "^0.18.4",

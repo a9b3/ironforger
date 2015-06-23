@@ -7,13 +7,13 @@ var http = require('http');
 var env = process.env.NODE_ENV || 'dev';
 var config = rootRequire('config')[env];
 var path = require('path');
-var debug = require('debug')(path.basename(__dirname));
+var debug = require('debug')(config.debugName + ':' + path.basename(__dirname));
 
 /**
  * Returns a http server
  * @return {http.Server}
  */
-module.exports = function() {
+module.exports = (function() {
     var app = express();
     var server = http.createServer(app);
 
@@ -22,7 +22,7 @@ module.exports = function() {
 
     debug('returning server');
     return server;
-};
+}());
 
 /**
  * Bootstraps an express app

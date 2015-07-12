@@ -1,13 +1,12 @@
 ;(function() {
 'use strict';
 
-require('../rootRequire.js');
 var express = require('express');
 var http = require('http');
 var env = process.env.NODE_ENV || 'dev';
 var config = rootRequire('config')[env];
 var path = require('path');
-var debug = require('debug')(config.debugName + ':' + path.basename(__dirname));
+var debug = require('debug')(config.debugTag + ':' + path.basename(__dirname));
 
 /**
  * Returns a http server
@@ -20,7 +19,6 @@ module.exports = (function() {
     // configure app (routes etc.)
     bootstrap(app);
 
-    debug('returning server');
     return server;
 }());
 

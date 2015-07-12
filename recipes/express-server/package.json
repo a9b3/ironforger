@@ -1,5 +1,5 @@
 {
-  "name": "recipeName",
+  "name": "chatServer",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,6 +11,6 @@
     "express": "^4.13.0"
   },
   "scripts": {
-    "start": "NODE_ENV=dev DEBUG=recipeName* nodemon index.js"
+    "start": "NODE_ENV=dev DEBUG=chatServer* nodemon index.js"
   }
 }

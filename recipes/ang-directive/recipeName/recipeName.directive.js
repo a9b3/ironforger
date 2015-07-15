@@ -7,6 +7,11 @@ angular.module('')
         return {
             restrict: 'E',
             templateUrl: 'scripts/recipeName/recipeName.tpl.html',
+            controller: 'recipeNameCtrl',
+            scope: {
+
+            },
+            transclude: true,
             link: linkFunc
         }
     }

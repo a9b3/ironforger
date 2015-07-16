@@ -33,7 +33,7 @@ gulp.task('build', function () {
         .pipe(gulp.dest(DIST_DIR));
 });
 
-gulp.task('buildCss', function () {
+gulp.task('buildCss', ['sass'], function () {
     var srcFiles = [];
 
     srcFiles.push('.tempcss/*');

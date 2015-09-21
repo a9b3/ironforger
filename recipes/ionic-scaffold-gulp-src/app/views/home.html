@@ -1,0 +1,11 @@
+<ion-view title="Home">
+    <ion-content>
+        <ion-item
+          ng-repeat="todo in todos"
+          class="item item-icon-right"
+          ui-sref="home.detail({todo: $index})">
+
+            <span ng-class="{done: todo.done}">{{todo.title}}</span>
+        </ion-item>
+    </ion-content>
+</ion-view>

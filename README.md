@@ -1,12 +1,18 @@
 # Ironforger
-Use ironforger as a manager for directories you would like to be able to
-just simply paste into anywhere through the ironforger CLI. You can create
-symlinks to folders you would like to save to ironforger in ironforger's recipes
-folder. From then running the ironforger command will list your symlink and choosing
-it will essentially paste it into your current directory.
 
 ```
 npm install -g ironforger
 
+// interface for choosing template
 ironforger
+
+ironforger save [dir]
+ironforger rm [name]
+ironforger ls
 ```
+
+ironforger allows you to save your template folders as symlinks and you can
+copy them into any other folder through the ironforger cli. you can manage your
+symlinks with ls, save, rm.
+
+[screen](https://github.com/esayemm/ironforger/blob/master/screenshot/ironforger.gif)

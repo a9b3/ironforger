@@ -1,6 +1,6 @@
 {
   "name": "ironforger",
-  "version": "0.1.5",
+  "version": "0.3",
   "description": "Simple boilerplate app.",
   "main": "index.js",
   "scripts": {},

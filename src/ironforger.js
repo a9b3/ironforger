@@ -71,10 +71,15 @@ function getRecipes() {
  * copies source dir to target dir
  */
 function copyDir(source, target) {
+    const hiddenExcludes = [
+        'git',
+        'DS_STORE',
+    ];
+    const hiddenExcludesRegexp = new RegExp('^\\.(' + excludes.join('|') + ')');
     var excludes = /(node_modules|bower_components)/;
 
     fs.readdirSync(source).forEach(function(file) {
-        if (/^\./.test(file)) return;
+        if (hiddenExcludesRegexp.test(file)) return;
         if (excludes.test(file)) return;
         console.log(file);
         fs.copySync(path.resolve(source, file), path.resolve(target, file));

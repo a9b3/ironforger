@@ -75,7 +75,7 @@ function copyDir(source, target) {
         'git',
         'DS_STORE',
     ];
-    const hiddenExcludesRegexp = new RegExp('^\\.(' + excludes.join('|') + ')', 'i');
+    const hiddenExcludesRegexp = new RegExp('^\\.(' + hiddenExcludes.join('|') + ')', 'i');
     var excludes = /(node_modules|bower_components)/;
 
     fs.readdirSync(source).forEach(function(file) {

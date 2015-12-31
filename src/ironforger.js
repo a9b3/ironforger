@@ -41,6 +41,12 @@ function generatePrompts() {
         choices: getRecipes()
     });
 
+    prompts.push({
+        type: 'input',
+        name: 'name',
+        message: 'Enter name.',
+    });
+
     return prompts;
 }
 
@@ -50,9 +56,9 @@ function generatePrompts() {
  */
 function answerHandler(answer) {
     var recipeDir = path.resolve(RECIPES_DIR, answer.recipe);
-    var newName = answer.newName;
+    var name = answer.name;
 
-    copyDir(recipeDir, CALLEE_DIR);
+    copyDir(recipeDir, path.resolve(CALLEE_DIR, name));
 }
 
 /**
